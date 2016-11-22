@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Fitness Tracker App'/>
+        <page name='FizzBuzz App'/>
+        <page name='Population Growth'/>
+        <page name='Grocery List - Arrays'/>
+        <page name='Switches'/>
+        <page name='Reference Material'/>
+    </pages>
+</playground>
