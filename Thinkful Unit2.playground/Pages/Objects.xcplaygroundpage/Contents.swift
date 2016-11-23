@@ -19,6 +19,7 @@ class Person {
     var profession:String
     var location:String
     var age:Int
+    var partner:Person?
     init(name:String, gender:String, profession:String, location:String, age:Int) {
         self.name = name
         self.gender = gender
@@ -39,9 +40,17 @@ class Person {
         self.gender = "Unknown"
         self.location = "Unknown"
         self.age = 0
-        
     }
-    
+    func createRelationship(partner:Person) {
+        self.partner = partner
+    }
+    func dislayRelationshipMessage() {
+        if let partner = partner {
+            print("\(name) is in a relationship with \(partner.name)!")
+        }else {
+            print("\(name) is not in a relationship.")
+        }
+    }
 }
     
 
@@ -50,12 +59,20 @@ let peter = Person(name: "Peter", gender: "Male", profession: "Computer Develope
 
 let alessandro = Person(name: "Alessandro", gender: "Male", profession: "Product Manager", location: "New Jersey", age: 24)
 
-let chelsey = Person(name: "Chelsey", gender: "Female", profession: "Social Media Management", location: "Female", age: 24)
+let amy = Person(name: "Amy", gender: "Female", profession: "Social Media Management", location: "Female", age: 24)
 
 let judy = Person(name: "Judy")
 
 let vera = Person(profession: "Pizzeria")
 
+peter.createRelationship(partner: amy)
+amy.createRelationship(partner: peter)
+
+peter.dislayRelationshipMessage()
+
+print()
+
+amy.dislayRelationshipMessage()
 
 
 
